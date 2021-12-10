@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="VBoxRegister" prefHeight="440.0" prefWidth="496.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterController">
+    <children>
+        <AnchorPane layoutX="-1.0" prefHeight="440.0" prefWidth="497.0" style="-fx-background-color: #DEB887;">
+            <children>
+                <TextField fx:id="firstName" layoutX="88.0" layoutY="115.0" prefHeight="40.0" prefWidth="320.0" promptText="Имя" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="88.0" />
+                <Button cancelButton="true" layoutX="379.0" layoutY="41.0" mnemonicParsing="false" onAction="#ActionBack" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #FFF8DC;" text="Назад" textFill="#8d5959">
+                    <font>
+                        <Font name="Simplex" size="12.0" />
+                    </font></Button>
+                <Label layoutX="88.0" layoutY="36.0" text="Регистрация">
+                    <font>
+                        <Font name="Micra" size="24.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="emailField" layoutX="89.0" layoutY="169.0" prefHeight="40.0" prefWidth="320.0" promptText="e-mail" />
+                <PasswordField fx:id="passwordField" layoutX="89.0" layoutY="225.0" prefHeight="40.0" prefWidth="320.0" promptText="Пароль" />
+                <PasswordField fx:id="confirmPassword" layoutX="89.0" layoutY="279.0" prefHeight="40.0" prefWidth="320.0" promptText="Повторите пароль" />
+            <Separator layoutX="1.0" layoutY="78.0" prefHeight="17.0" prefWidth="496.0" />
+                <Button defaultButton="true" layoutX="89.0" layoutY="387.0" mnemonicParsing="false" onAction="#ActionRegister" prefHeight="32.0" prefWidth="102.0" style="-fx-background-color: #FFF8DC;" text="Регистрация" textFill="#b95959">
+                    <font>
+                        <Font name="Sitka Small" size="12.0" />
+                    </font>
+            </Button>
+                <Label layoutX="275.0" layoutY="394.0" text="Есть аккаунт?" textFill="#8d5959" />
+                <Button layoutX="361.0" layoutY="390.0" mnemonicParsing="false" onAction="#ActionLogin" style="-fx-background-color: #FFF8DC;" text="Войти" textFill="#8d5959" />
+            <TextField fx:id="account" layoutX="245.0" layoutY="335.0" prefHeight="26.0" prefWidth="165.0" promptText="1000" />
+            <Label layoutX="88.0" layoutY="339.0" text="Можете пополинть счёт:" />
+            </children>
+        </AnchorPane>
+    </children>
+</Pane>

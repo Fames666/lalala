@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" minHeight="589.0" minWidth="550.0" prefHeight="611.0" prefWidth="599.0" style="-fx-background-image: url(&quot;https://internationalwealth.info/wp-content/uploads/2019/09/for-bank.jpg&quot;);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController">
+    <top>
+        <AnchorPane id="header" prefHeight="108.0" prefWidth="550.0" style="-fx-background-color: #DEB887;" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="loginButton" layoutX="486.0" layoutY="42.0" mnemonicParsing="false" onAction="#ActionLogout" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #FFF8DC;" text="Выйти" textFill="#646464" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="42.0">
+                    <font>
+                        <Font name="Sitka Small Bold" size="10.0" />
+                    </font>
+                </Button>
+                <Label layoutX="40.0" layoutY="37.0" text="Окно администратора" AnchorPane.topAnchor="37.0">
+                    <font>
+                        <Font name="Micra" size="24.0" />
+                    </font>
+                </Label>
+            <Separator layoutY="107.0" prefHeight="2.0" prefWidth="599.0" />
+            </children>
+        </AnchorPane>
+    </top>
+    <bottom>
+    </bottom>
+   <center>
+        <AnchorPane prefHeight="501.0" prefWidth="599.0" style="-fx-background-color: #DEB887;" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="tableUserView" layoutX="42.0" layoutY="53.0" prefHeight="245.0" prefWidth="518.0" style="-fx-background-color: #FFF8DC;" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="39.0" AnchorPane.topAnchor="53.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="columnName" prefWidth="75.0" text="Имя" />
+                        <TableColumn fx:id="columnRole" prefWidth="129.0" text="Активность" />
+                        <TableColumn fx:id="columnEmail" prefWidth="129.0" text="e-mail" />
+                        <TableColumn fx:id="columnAccount" prefWidth="129.0" text="Счёт" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <Label layoutX="59.0" layoutY="319.0" text="Имя" />
+                <Label layoutX="56.0" layoutY="353.0" text="Роль" />
+                <Label layoutX="55.0" layoutY="386.0" text="e-mail" />
+                <Label layoutX="51.0" layoutY="426.0" text="Пароль" />
+                <ChoiceBox fx:id="role" layoutX="121.0" layoutY="349.0" prefHeight="25.0" prefWidth="193.0" style="-fx-background-color: #FFF8DC;" />
+                <TextField fx:id="name" layoutX="122.0" layoutY="315.0" prefHeight="25.0" prefWidth="192.0" />
+                <TextField fx:id="email" layoutX="121.0" layoutY="382.0" prefHeight="25.0" prefWidth="193.0" />
+                <TextField fx:id="password" layoutX="121.0" layoutY="422.0" prefHeight="25.0" prefWidth="193.0" />
+                <Button fx:id="btnAdd" layoutX="330.0" layoutY="458.0" mnemonicParsing="false" onAction="#ActionButtonPressed" prefHeight="34.0" prefWidth="108.0" style="-fx-background-color: #FFF8DC;" text="Применить" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="458.0" />
+                <Button fx:id="btnDelete" layoutX="450.0" layoutY="459.0" mnemonicParsing="false" onAction="#ActionButtonPressed" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: #FFF8DC;" text="Удалить" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="459.0" />
+            <Label alignment="BOTTOM_LEFT" contentDisplay="TOP" layoutX="42.0" layoutY="14.0" text="Наши клиенты:" textOverrun="CLIP">
+               <font>
+                  <Font name="Courier New" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Label>
+            <Button layoutX="330.0" layoutY="404.0" mnemonicParsing="false" onAction="#ActionShowData" prefHeight="35.0" prefWidth="108.0" style="-fx-background-color: #FFF8DC;" text="Отчет" />
+            <Button layoutX="450.0" layoutY="357.0" mnemonicParsing="false" onAction="#ActionBlock" prefHeight="35.0" prefWidth="108.0" style="-fx-background-color: #FFF8DC;" text="Заблокировать " />
+            <TextField fx:id="account" layoutX="122.0" layoutY="462.0" prefHeight="25.0" prefWidth="192.0" />
+            <Label layoutX="56.0" layoutY="466.0" text="Счёт" />
+            <Button layoutX="450.0" layoutY="310.0" mnemonicParsing="false" onAction="#ActionUnlock" prefHeight="35.0" prefWidth="108.0" style="-fx-background-color: #FFF8DC;" text="Разблокировать" />
+            <Button layoutX="330.0" layoutY="309.0" mnemonicParsing="false" onAction="#ActionGraff" prefHeight="35.0" prefWidth="108.0" style="-fx-background-color: #FFF8DC;" text="График" />
+            <Button layoutX="330.0" layoutY="357.0" mnemonicParsing="false" onAction="#ActionFile" prefHeight="35.0" prefWidth="108.0" style="-fx-background-color: #FFF8DC;" text="Файл" />
+            </children>
+        </AnchorPane>
+   </center>
+</BorderPane>

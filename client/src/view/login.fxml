@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="VBoxLogin" prefHeight="318.0" prefWidth="426.0" style="-fx-background-color: #DEB887;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <children>
+        <AnchorPane id="AnchorPane" fx:id="registerLabel" prefHeight="315.0" prefWidth="426.0" style="-fx-background-color: #DEB887;">
+            <children>
+                <Button defaultButton="true" layoutX="115.0" layoutY="246.0" mnemonicParsing="false" onAction="#ActionLogin" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #FFF8DC;" text="Войти" textFill="#b95959">
+                    <font>
+                        <Font name="Sitka Small" size="12.0" />
+                    </font></Button>
+                <TextField id="text-field" fx:id="emailField" layoutX="39.0" layoutY="119.0" prefHeight="35.0" prefWidth="346.0" promptText="E-mail" />
+                <Label layoutX="115.0" layoutY="30.0" prefHeight="35.0" prefWidth="255.0" text="Авторизация" textAlignment="CENTER">
+                    <font>
+                        <Font name="Micra" size="24.0" />
+                    </font>
+                </Label>
+                <PasswordField fx:id="passwordField" layoutX="40.0" layoutY="176.0" prefHeight="35.0" prefWidth="345.0" promptText="Пароль" />
+                <Button cancelButton="true" layoutX="329.0" layoutY="35.0" mnemonicParsing="false" onAction="#ActionBack" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #FFF8DC;" text="Назад" textFill="#8d5959">
+                    <font>
+                        <Font name="Simplex" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="243.0" layoutY="246.0" mnemonicParsing="false" onAction="#ActionRegister" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #FFF8DC;" text="Регистрация" textFill="#8d5959" />
+            <Separator layoutX="-1.0" layoutY="84.0" prefWidth="426.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

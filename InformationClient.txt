@@ -1,0 +1,30 @@
+1имя:user,
+деньги: 100,
+логин: mail@gmail.com 
+1имя:user,
+деньги: 100,
+логин: mail@gmail.com 
+2имя:Alex,
+деньги: 1474,
+логин: alex@tut.by 
+3имя:dasa,
+деньги: 1000,
+логин: dasa@tut.by 
+1имя:user,
+деньги: 100,
+логин: mail@gmail.com 
+2имя:Alex,
+деньги: 1474,
+логин: alex@tut.by 
+3имя:dasa,
+деньги: 1000,
+логин: dasa@tut.by 
+1имя:user,
+деньги: 100,
+логин: mail@gmail.com 
+2имя:Alex,
+деньги: 1474,
+логин: alex@tut.by 
+3имя:dasa,
+деньги: 1000,
+логин: dasa@tut.by 
